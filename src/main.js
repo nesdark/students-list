@@ -17,6 +17,8 @@ function setStudentOnScreen(student, grade) {
   `
 }
 
+
+
 const students = []
 
 const totalStudents = window.prompt("Enter the total of students: ")
@@ -26,7 +28,7 @@ for (let c = 1; c <= totalStudents; c++) {
   let currentGrade = window.prompt("Enter student grade: ")
   students.push({ name: currentName, grade: currentGrade })
 }
-
+studentsParent.innerHTML = ``
 students.forEach((student) => {
   setStudentOnScreen(student.name, student.grade)
 })
